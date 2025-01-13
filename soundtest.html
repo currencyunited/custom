@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound</title>
+</head>
+<body>
+    <button id="playSoundButton">Play Sound</button>
+
+    <script>
+        document.getElementById('playSoundButton').addEventListener('click', function() {
+            var audio = new Audio("C:/Users/ApollosMiller/Downloads/stompwav-14753.mp3");
+            audio.play();
+        });
+    </script>
+
+</body>
+</html>

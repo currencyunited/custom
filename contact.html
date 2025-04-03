@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-  <form action="https://getform.io/f/ajjmvyra" method="POST">
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <input type="text" name="message">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        .hidden-input {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+  <form action="https://getform.io/f/ajjmvyra" method="POST" enctype="multipart/form-data">
+    <label for="file1">Upload File:</label>
+    <input type="file" name="file1" id="file1" required>
+    <input type="file" name="file2" id="file2">
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" placeholder="Enter your message here" required aria-labelledby="message"></textarea>
     <!-- add hidden Honeypot input to prevent spams -->
-    <input type="hidden" name="_gotcha" style="display:none !important">
+    <input type="hidden" name="_gotcha">
     <!-- checkbox handle -->
-    <input type="checkbox" name="subscribe" value="yes" checked>
-    <input type="hidden" name="subscribe" value="no">
+    <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+    <label for="subscribe">Subscribe to newsletter</label>
     <!-- radio button handle -->
-    <input type="radio" name="gender" value="male" checked>
-    <input type="radio" name="gender" value="female">
-    <input type="radio" name="gender" value="other">
+    <label for="gender-male">
+        <input type="radio" name="gender" id="gender-male" value="male"> Male
+    </label>
+    <label for="gender-female">
+        <input type="radio" name="gender" id="gender-female" value="female">
+        Female
+    </label>
+    <label for="gender-other">
+        <input type="radio" name="gender" id="gender-other" value="other"> Other
+    </label>
     <!-- select field handle -->
-    <select name="work-experience">
-        <option value="one-year">0-1 years</option>
-        <option value="one-five-years">1-5 years</option>
+    <label for="work-experience">Work Experience:</label>
+    <select name="work-experience" id="work-experience" required>
+        <option value="" disabled selected>Select your work experience</option>
+        <option value="0-1-years">0-1 years</option>
+        <option value="1-5-years">1-5 years</option>
     </select>
     <button type="submit">Send</button>
-</form>   
-        
+  </form>
 </body>
 </html>
